@@ -12,9 +12,11 @@ class Login extends React.Component {
         super(props);
         this.state={
             username:'',
-            password:''
+            password:'',
+            toDashboard: false
         }
     }
+
     loginClickHandler = (event) => {
         var payload = {
             "email":this.state.username,
@@ -22,10 +24,12 @@ class Login extends React.Component {
         };
         
         console.log("logging in: ", payload);
+        this.props.history.push('/dashboard');
     }
 
     render (props) {
         return (
+
             <div className="login-component-wrapper">
                 <div className="login-background"></div>
                 <div className="login-form-wrapper">
