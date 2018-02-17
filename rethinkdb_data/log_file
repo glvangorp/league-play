@@ -1,0 +1,32 @@
+2018-02-16T22:36:22.034381000 0.026076s notice: Recursively removing directory /Users/gregvangorp/Code/league-play/rethinkdb_data/tmp
+2018-02-16T22:36:22.036121000 0.027820s notice: Initializing directory /Users/gregvangorp/Code/league-play/rethinkdb_data
+2018-02-16T22:36:22.036207000 0.027902s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/gregvangorp/Code/league-play/rethinkdb_data' did not already exist or is empty.)
+2018-02-16T22:36:22.036234000 0.027929s notice: Running rethinkdb 2.3.6 (CLANG 8.1.0 (clang-802.0.42))...
+2018-02-16T22:36:22.042988000 0.034684s notice: Running on Darwin 17.2.0 x86_64
+2018-02-16T22:36:22.043045000 0.034740s notice: Loading data from directory /Users/gregvangorp/Code/league-play/rethinkdb_data
+2018-02-16T22:36:22.154741000 0.146441s info: Automatically using cache size of 4011 MB
+2018-02-16T22:36:22.155192000 0.146891s notice: Listening for intracluster connections on port 29015
+2018-02-16T22:36:22.156633000 0.148332s notice: Listening for client driver connections on port 28015
+2018-02-16T22:36:22.156722000 0.148421s notice: Listening for administrative HTTP connections on port 8080
+2018-02-16T22:36:22.156730000 0.148429s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2018-02-16T22:36:22.156735000 0.148434s notice: Listening on driver addresses: 127.0.0.1, ::1
+2018-02-16T22:36:22.156738000 0.148436s notice: Listening on http addresses: 127.0.0.1, ::1
+2018-02-16T22:36:22.156741000 0.148440s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-16T22:36:22.156745000 0.148443s notice: Server ready, "admins_mbp_lan_7qa" b7d44215-762a-4e16-b789-3a54164a9d9c
+2018-02-16T22:38:04.694380000 102.689764s info: Table ea0850f6-f778-48c9-8d55-e8650a516c35: Starting a new Raft election for term 1.
+2018-02-16T22:38:04.694528000 102.689911s info: Table ea0850f6-f778-48c9-8d55-e8650a516c35: Added replica on this server.
+2018-02-16T22:38:04.716200000 102.711584s info: Table ea0850f6-f778-48c9-8d55-e8650a516c35: This server is Raft leader for term 1. Latest log index is 0.
+2018-02-16T23:50:21.290797000 4390.050306s notice: Someone asked for the nonwhitelisted file "/api/db/tutorial/insert".  If this should be accessible, add it to the static web assets.
+2018-02-16T23:59:02.425909000 4911.202938s info: Table 70392291-60bd-4fb8-b0ed-2d1c7fee981d: Starting a new Raft election for term 1.
+2018-02-16T23:59:02.426025000 4911.203055s info: Table 70392291-60bd-4fb8-b0ed-2d1c7fee981d: Added replica on this server.
+2018-02-16T23:59:02.447201000 4911.224232s info: Table 70392291-60bd-4fb8-b0ed-2d1c7fee981d: This server is Raft leader for term 1. Latest log index is 0.
+2018-02-17T00:37:18.365071000 7174.271470s info: Table b115d1be-4ce6-4267-b8b2-e0f0873146a0: Starting a new Raft election for term 1.
+2018-02-17T00:37:18.365338000 7174.271736s info: Table b115d1be-4ce6-4267-b8b2-e0f0873146a0: Added replica on this server.
+2018-02-17T00:37:18.385079000 7174.291478s info: Table b115d1be-4ce6-4267-b8b2-e0f0873146a0: This server is Raft leader for term 1. Latest log index is 0.
+2018-02-17T00:41:42.498469000 7438.414579s info: Table 781d7217-62f5-43fa-8e79-c1aa822d2f48: Starting a new Raft election for term 1.
+2018-02-17T00:41:42.498642000 7438.414752s info: Table 781d7217-62f5-43fa-8e79-c1aa822d2f48: Added replica on this server.
+2018-02-17T00:41:42.519396000 7438.435507s info: Table 781d7217-62f5-43fa-8e79-c1aa822d2f48: This server is Raft leader for term 1. Latest log index is 0.
+2018-02-17T00:46:11.226466000 7707.152565s info: Table 12de83e4-2a94-4a13-bc0e-8932634cac1d: Starting a new Raft election for term 1.
+2018-02-17T00:46:11.226859000 7707.152957s info: Table 12de83e4-2a94-4a13-bc0e-8932634cac1d: Added replica on this server.
+2018-02-17T00:46:11.245927000 7707.172026s info: Table 12de83e4-2a94-4a13-bc0e-8932634cac1d: This server is Raft leader for term 1. Latest log index is 0.
+2018-02-17T00:46:21.321547000 7717.248030s info: Table 781d7217-62f5-43fa-8e79-c1aa822d2f48: Configuration is changing.
