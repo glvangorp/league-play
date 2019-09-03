@@ -3,6 +3,9 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 5000;
 
+const passport = require('passport');
+var BasicStrategy = require('passport-http').BasicStrategy;
+
 /* start RethinkDB */
 const r = require('rethinkdb');
 
@@ -16,6 +19,18 @@ r.connect( {host: 'localhost', port: 28015}, function(err, conn) {
     conn.use('league_play');
     connection = conn;
 });
+
+/* configure passport */
+passport.use(new BasicStrategy(
+  function(username, password, done) {
+    User.findOne({ username: username }, function (err, user) {
+      if (err) { return done(err); }
+      if (!user) { return done(null, false); }
+      if (!user.validPassword(password)) { return done(null, false); }
+      return done(null, user);
+    });
+  }
+));
 
 // inserting new user
 /*
@@ -37,8 +52,11 @@ r.db('league_play').table('users').insert({
 
   */
 
-app.get('/api/v1/get-users', (req, res) => {
-  r.table('users').run(connection, function(err, cursor) {
+app.get(
+  '/api/v1/get-users', 
+  passport.authenticate('basic', { session: false }),
+  (req, res) => {
+    r.table('users').run(connection, function(err, cursor) {
       if (err) {
         throw err;
       }

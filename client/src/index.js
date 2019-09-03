@@ -12,16 +12,19 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import * as Colors from 'material-ui/styles/colors';
 import { fade } from 'material-ui/utils/colorManipulator'
+import { draw } from 'material-ui/utils/drawManipulator'
+
 
 const getCustomTheme = () => {
     let overwrites = {
         palette: {
             primary2Color: Colors.green900,
-            primary1Color: Colors.green700,
+            primary1Color: '#186a4c', //Colors.green700,
             primary3Color: Colors.green400,
             accent1Color: Colors.yellow600,
             accent2Color: Colors.yellow400,
             accent3Color: Colors.yellow300,
+            dontCommit: this,
             textColor: fade(Colors.darkBlack, 0.87),
             borderColor: Colors.green300,
             pickerHeaderColor: Colors.green700

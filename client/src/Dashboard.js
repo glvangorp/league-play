@@ -11,6 +11,7 @@ import {
 } from 'material-ui/Table';
 import AppBar from 'material-ui/AppBar';
 import './Dashboard.css';
+import muiThemeable from 'material-ui/styles/muiThemeable';
 
 class Dashboard extends React.Component {
 
@@ -41,33 +42,38 @@ class Dashboard extends React.Component {
         return (
             <div>
                 <AppBar title="League Play Dashboard" />
-                <div className="users-table">
-                    <Table>
-                        <TableHeader>
-                            <TableRow>
-                                <TableHeaderColumn>ID</TableHeaderColumn>
-                                <TableHeaderColumn>First Name</TableHeaderColumn>
-                                <TableHeaderColumn>Last Name</TableHeaderColumn>
-                                <TableHeaderColumn>Handicap</TableHeaderColumn>
-                            </TableRow>
-                        </TableHeader>
-                        <TableBody>
-                            { 
-                                this.state.users.map( function(u, i) {
-                                    console.log(u);
-                                    console.log('renderer');
-                                    return (
-                                        <TableRow key={i}>
-                                            <TableRowColumn>{u.id}</TableRowColumn>
-                                            <TableRowColumn>{u.first_name}</TableRowColumn>
-                                            <TableRowColumn>{u.last_name}</TableRowColumn>
-                                            <TableRowColumn>{u.handicap}</TableRowColumn>
-                                        </TableRow>
-                                    );
-                                })
-                            }
-                        </TableBody>
-                    </Table>
+                <div className="table-wrapper">
+                    <div className="table-header" style={ {background: this.props.muiTheme.palette.primary1Color} }>League Members</div>
+                    <div className="users-table">
+                        <Table selectable={false}>
+                            <TableHeader displaySelectAll={false} adjustForCheckbox={false} enableSelectAll={false}>
+                                <TableRow>
+                                    <TableHeaderColumn>First Name</TableHeaderColumn>
+                                    <TableHeaderColumn>Last Name</TableHeaderColumn>
+                                    <TableHeaderColumn>Handicap</TableHeaderColumn>
+                                </TableRow>
+                            </TableHeader>
+                            <TableBody
+                                displayRowCheckbox={false}
+                                deselectOnClickaway={false}
+                                showRowHover={false}
+                                stripedRows={false}>
+                                { 
+                                    this.state.users.map( function(u, i) {
+                                        console.log(u);
+                                        console.log('renderer');
+                                        return (
+                                            <TableRow key={i}>
+                                                <TableRowColumn>{u.first_name}</TableRowColumn>
+                                                <TableRowColumn>{u.last_name}</TableRowColumn>
+                                                <TableRowColumn>{u.handicap}</TableRowColumn>
+                                            </TableRow>
+                                        );
+                                    })
+                                }
+                            </TableBody>
+                        </Table>
+                    </div>
                 </div>
             </div>
         );
@@ -75,4 +81,4 @@ class Dashboard extends React.Component {
 
 }
 
-export default withRouter(Dashboard);
+export default muiThemeable()(withRouter(Dashboard));

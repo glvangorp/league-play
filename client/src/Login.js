@@ -19,8 +19,8 @@ class Login extends React.Component {
 
     loginClickHandler = (event) => {
         var payload = {
-            "email":this.state.username,
-            "password":this.state.password
+            "email": this.state.username,
+            "password": this.state.password
         };
         
         console.log("logging in: ", payload);
@@ -35,9 +35,9 @@ class Login extends React.Component {
                 <div className="login-form-wrapper">
                     <div className="login-form">
                         <div className="header" style={ {color: this.props.muiTheme.palette.primary1Color} } >League Play</div>
-                        <TextField fullWidth={true} floatingLabelText="Username" onChange = {(event,newValue) => this.setState({username:newValue})}/>
+                        <TextField fullWidth={true} floatingLabelText="Username" onChange= { (event, newValue) => this.setState({ username: newValue })}/>
                         <br />
-                        <TextField fullWidth={true} floatingLabelText="Password" type="password" onChange = {(event,newValue) => this.setState({password:newValue})}/>
+                        <TextField fullWidth={true} floatingLabelText="Password" type="password" onChange= {(event, newValue) => this.setState({ password: newValue })}/>
                         <br />
                         <div className="sign-in-btn">
                             <RaisedButton primary={true} fullWidth={true} label="Sign In" onClick={(event) => this.loginClickHandler(event)} />
